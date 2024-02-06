@@ -1,10 +1,13 @@
 import React from 'react';
+import Posts from "../Posts/Posts";
 
-const Post = ({post}) => {
-    console.log(post);
+const Post = ({post, getCurrentPost}) => {
+    // console.log(post);
+    const {id, title} = post;
     return (
         <div>
-            
+            <h1>{id}. {title}</h1>
+            <button onClick={() => getCurrentPost(post)}>Details</button>
         </div>
     );
 };
