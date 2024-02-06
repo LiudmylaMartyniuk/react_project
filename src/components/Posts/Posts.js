@@ -6,6 +6,7 @@ import axios from "axios";
 import {axiosService} from "../../services/axiosService";
 import {urls} from "../../constants/urls";
 import {postService} from "../../services/postService";
+import css from './Posts.module.css'
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
@@ -20,12 +21,13 @@ const Posts = () => {
     }
 
     return (
+        <div className={css.Posts}>
             <div>
-                {postDetails && <PostDetails postDetails={postDetails}/>}
-                <hr/>
-                {posts.map(post => <Post key={post.id} post={post} getCurrentPost={getCurrentPost}/>)}
-            </div>
-
+            {postDetails && <PostDetails postDetails={postDetails}/>}
+        </div>
+            <hr/>
+            {posts.map(post => <Post key={post.id} post={post} getCurrentPost={getCurrentPost}/>)}
+        </div>
     );
 };
 
