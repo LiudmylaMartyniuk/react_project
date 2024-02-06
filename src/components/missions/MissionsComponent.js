@@ -17,7 +17,6 @@ const MissionsComponent = () => {
                 .map(value =>
                     (<MissionComponent value={value} key={value.mission_name}/>))
             }
-            }
         </div>
     );
 };
