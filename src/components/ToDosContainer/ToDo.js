@@ -7,7 +7,7 @@ const ToDo = ({todo}) => {
             <div>userId: {userId}</div>
             <div>id: {id}</div>
             <div>title: {title}</div>
-            <div>completed: {completed}</div>
+            <div>completed: {String(completed)}</div>
             <hr/>
         </div>
     );
